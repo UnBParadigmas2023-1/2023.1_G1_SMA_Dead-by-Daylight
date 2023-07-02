@@ -10,11 +10,11 @@ def agent_portrayal(agent):
     portrayal = {"Filled": "true", "Layer": 0, "w": 1, "h": 1}
     if type(agent) is GeneratorAgent:
         if not agent.activated:
-            portrayal['Shape'] = "assets/food.png"
+            portrayal['Shape'] = "assets/light_off.png"
     elif type(agent) is CharacterAgent:
         portrayal['Shape'] = "assets/blob.png"
     elif type(agent) is ExitAgent:
-        portrayal['Shape'] = "assets/blob_cannibal.png"
+        portrayal['Shape'] = "assets/door.png"
     return portrayal
 
 
