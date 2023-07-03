@@ -48,4 +48,3 @@ model_params = {
 grid = CanvasGrid(agent_portrayal, 30, 30, 500, 500)
 server = ModularServer(GameModel, [grid], "Dead by Daylight", model_params)
 server.port = 8080
-server.launch()
