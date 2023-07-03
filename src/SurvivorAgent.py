@@ -17,12 +17,12 @@ class SurvivorAgent(Agent):
         if self.alive is False:
             self.model.grid.remove_agent(self)
             self.model.schedule.remove(self)
+            self.model.survivors.remove(self)
         else:
             self.walk()
 
     def die(self):
         murderer = self.get_murderer_agent(self.pos)
-        print("MURDERER:", murderer)
         if len(murderer) > 0:
             self.alive = False
 
@@ -94,7 +94,6 @@ class SurvivorAgent(Agent):
     def get_murderer_agent(self, pos):
         try:
             this_cell = self.model.grid.get_cell_list_contents([pos])
-            print("THIS CELL", this_cell)
             target = []
             for obj in this_cell:
                 if obj is self.model.murderer:

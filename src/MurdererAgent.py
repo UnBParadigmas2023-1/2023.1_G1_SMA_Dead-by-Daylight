@@ -2,7 +2,7 @@ from mesa import Agent
 
 
 class MurdererAgent(Agent):
-    def __init__(self, unique_id, model, view_range=10,walk_speed=2, moore=True):
+    def __init__(self, unique_id, model, view_range=10,walk_speed=3, moore=True):
         super().__init__(unique_id, model)
         self.view_range = view_range  # Alcance da visão do personagem
         self.walk_speed = walk_speed  # Quadrados andados por passo('velocidade')

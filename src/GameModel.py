@@ -29,6 +29,7 @@ class GameModel(Model):
         self.grid.place_agent(self.murderer, self.grid.find_empty())
         self.schedule.add(self.murderer)
         
+        self.exit = ExitAgent(uuid.uuid1(), self)
         
         for i in range(self.num_agents):
             id = uuid.uuid1()
@@ -47,7 +48,6 @@ class GameModel(Model):
                 self.grid.place_agent(generator, self.grid.find_empty())
 
     def add_exit_agent(self):
-        self.exit = ExitAgent(uuid.uuid1(), self)
         x, y = self.select_random_edge()
         self.grid.place_agent(self.exit, (x, y))
         self.schedule.add(self.exit)
@@ -61,12 +61,15 @@ class GameModel(Model):
     #             self.grid.place_agent(agent, self.grid.find_empty())
 
     def step(self):
-        self.schedule.step()
+        if not self.game_over:
+            self.schedule.step()
 
-        if not any(isinstance(agent, GeneratorAgent) for agent in self.schedule.agents):
+        print("GAME OVER: ", self.game_over)
+
+        if len(self.survivors) == 0 or self.exit.escaped:
             self.game_over = True
 
-        if self.game_over and not any(isinstance(agent, GeneratorAgent) for agent in self.schedule.agents) and not self.exit_agent_created:
+        if len(self.generators) == 0 and not self.exit_agent_created:
             self.add_exit_agent()
             self.exit_agent_created = True
 

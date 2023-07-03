@@ -11,6 +11,7 @@ class GeneratorAgent(Agent):
         if self.activated:
             self.model.grid.remove_agent(self)
             self.model.schedule.remove(self)
+            self.model.generators.remove(self)
 
     def activate(self):
         survivors = self.get_survivor_agent(self.pos)

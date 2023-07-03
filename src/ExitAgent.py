@@ -9,19 +9,23 @@ class ExitAgent(Agent):
 
     def step(self):
         self.escape()
-        if self.escaped:
-            self.model.game_over = True
 
     def escape(self):
         survivors = self.get_survivor_agent(self.pos)
-        num_character_agents = sum(isinstance(agent, SurvivorAgent)
-                                   for agent in self.model.schedule.agents)
-        if len(survivors) > num_character_agents:
+        for i in survivors:
+            self.model.grid.remove_agent(i)
+            self.model.schedule.remove(i)
+            self.model.survivors.remove(i)
+        if len(survivors) > 0:
             self.escaped = True
 
     def get_survivor_agent(self, pos):
         try:
             this_cell = self.model.grid.get_cell_list_contents([pos])
-            return [obj for obj in this_cell if isinstance(obj, SurvivorAgent)]
+            target = []
+            for obj in this_cell:
+                if obj in self.model.survivors:
+                    target.append(obj)
+            return target
         except:
             return []
