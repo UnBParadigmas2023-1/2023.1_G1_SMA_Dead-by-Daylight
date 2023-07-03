@@ -10,8 +10,9 @@ import random
 
 
 class GameModel(Model):
-    def __init__(self, N, width, height):
-        self.num_agents = N
+    def __init__(self, num_survivors, num_generators, width, height):
+        self.num_generators = num_generators
+        self.num_survivors = num_survivors
         self.grid = MultiGrid(width, height, True)
         self.schedule = RandomActivation(self)
         self.game_over = False
@@ -31,7 +32,7 @@ class GameModel(Model):
         
         self.exit = ExitAgent(uuid.uuid1(), self)
         
-        for i in range(self.num_agents):
+        for i in range(self.num_survivors):
             id = uuid.uuid1()
             survivor = SurvivorAgent(id, self)
             self.survivors.append(survivor)
@@ -39,7 +40,7 @@ class GameModel(Model):
             if self.grid.exists_empty_cells():
                 self.grid.place_agent(survivor, self.grid.find_empty())
 
-        for i in range(4):
+        for i in range(self.num_generators):
             id = uuid.uuid1()
             generator = GeneratorAgent(id, self)
             self.generators.append(generator)

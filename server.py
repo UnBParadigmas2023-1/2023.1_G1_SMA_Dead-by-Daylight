@@ -1,5 +1,6 @@
 from mesa.visualization.modules import CanvasGrid
 from mesa.visualization.ModularVisualization import ModularServer
+import mesa
 from src.GeneratorAgent import GeneratorAgent
 from src.MurdererAgent import MurdererAgent
 from src.SurvivorAgent import SurvivorAgent
@@ -24,8 +25,27 @@ def agent_portrayal(agent):
     return portrayal
 
 
+model_params = {
+    # Slide
+    "num_survivors": mesa.visualization.Slider(
+        name="Número de Sobreviventes",
+        min_value=0,
+        max_value=10,
+        step=1,
+        value=5,
+    ),
+    "num_generators": mesa.visualization.Slider(
+        name="Número de geradores",
+        min_value=0,
+        max_value=10,
+        step=1,
+        value=5,
+    ),
+    "width": 30,
+    "height": 30,
+}
+
 grid = CanvasGrid(agent_portrayal, 30, 30, 500, 500)
-server = ModularServer(GameModel, [grid], "Dead by Daylight", {
-                       "N": 8, "width": 30, "height": 30})
+server = ModularServer(GameModel, [grid], "Dead by Daylight", model_params)
 server.port = 8080
 server.launch()
