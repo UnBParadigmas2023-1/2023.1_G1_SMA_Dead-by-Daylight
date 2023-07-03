@@ -17,9 +17,9 @@ def agent_portrayal(agent):
             portrayal['Shape'] = "assets/light_on.png"
     elif type(agent) is SurvivorAgent:
         if agent.alive:
-            portrayal['Shape'] = "assets/v.png"
+            portrayal['Shape'] = "assets/blob.png"
     elif type(agent) is MurdererAgent:
-        portrayal['Shape'] = "assets/jason_mask.png"
+        portrayal['Shape'] = "assets/devil.png"
     elif type(agent) is ExitAgent:
         portrayal['Shape'] = "assets/door.png"
     return portrayal

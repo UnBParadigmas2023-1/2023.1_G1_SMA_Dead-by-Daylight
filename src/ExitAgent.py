@@ -16,7 +16,7 @@ class ExitAgent(Agent):
             self.model.grid.remove_agent(i)
             self.model.schedule.remove(i)
             self.model.survivors.remove(i)
-        if len(survivors) > 0:
+        if len(survivors) == len(self.model.survivors) + 1:
             self.escaped = True
 
     def get_survivor_agent(self, pos):
