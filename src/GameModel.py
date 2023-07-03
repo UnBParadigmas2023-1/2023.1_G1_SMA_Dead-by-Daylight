@@ -38,7 +38,7 @@ class GameModel(Model):
             if self.grid.exists_empty_cells():
                 self.grid.place_agent(survivor, self.grid.find_empty())
 
-        for i in range(self.num_agents):
+        for i in range(4):
             id = uuid.uuid1()
             generator = GeneratorAgent(id, self)
             self.generators.append(generator)

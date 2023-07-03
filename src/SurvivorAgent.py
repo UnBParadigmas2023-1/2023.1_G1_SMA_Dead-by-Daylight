@@ -8,11 +8,23 @@ class SurvivorAgent(Agent):
         self.moore = moore  # Personagem só anda na vertical e horizontal
         self.view_range = view_range  # Alcance da visão do personagem
         self.walk_speed = walk_speed  # Quadrados andados por passo('velocidade')
+        self.alive = True
 
     def step(self):
         if self.model.game_over:
             self.view_range = float('inf')  # Atribui o valor infinito ao view_range quando game_over for True
-        self.walk()
+        self.die()
+        if self.alive is False:
+            self.model.grid.remove_agent(self)
+            self.model.schedule.remove(self)
+        else:
+            self.walk()
+
+    def die(self):
+        murderer = self.get_murderer_agent(self.pos)
+        print("MURDERER:", murderer)
+        if len(murderer) > 0:
+            self.alive = False
 
     def walk(self):
         possible_walk_pos = self.model.grid.get_neighborhood(
@@ -65,7 +77,6 @@ class SurvivorAgent(Agent):
         return self.random.choice(next_pos)
 
     def check_pos_for_generator(self, pos):
-        
         try:
             # Retorna lista de objetos na célula diferentes de Agent
             this_cell = self.model.grid.get_cell_list_contents([pos])
@@ -78,4 +89,17 @@ class SurvivorAgent(Agent):
             return targets
         except:
             # Retorna nada
+            return []
+    
+    def get_murderer_agent(self, pos):
+        try:
+            this_cell = self.model.grid.get_cell_list_contents([pos])
+            print("THIS CELL", this_cell)
+            target = []
+            for obj in this_cell:
+                if obj is self.model.murderer:
+                    target.append(obj)
+            return target
+        except:
+            print("aqui")
             return []

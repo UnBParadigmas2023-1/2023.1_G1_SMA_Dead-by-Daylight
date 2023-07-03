@@ -13,7 +13,8 @@ def agent_portrayal(agent):
         if not agent.activated:
             portrayal['Shape'] = "assets/light_off.png"
     elif type(agent) is SurvivorAgent:
-        portrayal['Shape'] = "assets/blob.png"
+        if agent.alive:
+            portrayal['Shape'] = "assets/blob.png"
     elif type(agent) is MurdererAgent:
         portrayal['Shape'] = "assets/jason_mask.png"
     elif type(agent) is ExitAgent:
@@ -23,6 +24,6 @@ def agent_portrayal(agent):
 
 grid = CanvasGrid(agent_portrayal, 30, 30, 500, 500)
 server = ModularServer(GameModel, [grid], "Dead by Daylight", {
-                       "N": 4, "width": 25, "height": 15})
+                       "N": 5, "width": 30, "height": 30})
 server.port = 8080
 server.launch()

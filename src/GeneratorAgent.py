@@ -15,12 +15,15 @@ class GeneratorAgent(Agent):
     def activate(self):
         survivors = self.get_survivor_agent(self.pos)
         if len(survivors) > 0:
-            survivor = survivors[0]
             self.activated = True
 
     def get_survivor_agent(self, pos):
         try:
             this_cell = self.model.grid.get_cell_list_contents([pos])
-            return [obj for obj in this_cell if not isinstance(obj, GeneratorAgent)]
+            target = []
+            for obj in this_cell:
+                if obj in self.model.survivors:
+                    target.append(obj)
+            return target
         except:
             return []
