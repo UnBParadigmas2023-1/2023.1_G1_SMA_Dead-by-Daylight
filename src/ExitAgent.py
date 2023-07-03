@@ -1,5 +1,5 @@
 from mesa import Agent
-from src.CharacterAgent import CharacterAgent
+from src.SurvivorAgent import SurvivorAgent
 
 
 class ExitAgent(Agent):
@@ -14,7 +14,7 @@ class ExitAgent(Agent):
 
     def escape(self):
         survivors = self.get_survivor_agent(self.pos)
-        num_character_agents = sum(isinstance(agent, CharacterAgent)
+        num_character_agents = sum(isinstance(agent, SurvivorAgent)
                                    for agent in self.model.schedule.agents)
         if len(survivors) > num_character_agents:
             self.escaped = True
@@ -22,6 +22,6 @@ class ExitAgent(Agent):
     def get_survivor_agent(self, pos):
         try:
             this_cell = self.model.grid.get_cell_list_contents([pos])
-            return [obj for obj in this_cell if isinstance(obj, CharacterAgent)]
+            return [obj for obj in this_cell if isinstance(obj, SurvivorAgent)]
         except:
             return []
