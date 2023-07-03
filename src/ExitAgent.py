@@ -7,6 +7,7 @@ class ExitAgent(Agent):
         super().__init__(unique_id, model)
         self.escaped = False
         self.win = False
+        self.end = False
     def step(self):
         self.escape()
 
@@ -20,6 +21,8 @@ class ExitAgent(Agent):
             self.model.survivors.remove(i)
         if len(survivors) == len(self.model.survivors) + 1:
             self.escaped = True
+        if len(self.model.survivors) == 0:
+            self.end = True
 
     def get_survivor_agent(self, pos):
         try:
