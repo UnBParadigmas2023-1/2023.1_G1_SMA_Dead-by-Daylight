@@ -26,8 +26,9 @@ A simulação do jogo "Dead by Daylight" é realizada utilizando a biblioteca Me
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
+**Linguagens**: Python<br>
+**Tecnologias**: Mesa: Agent-based modeling in Python<br>
+
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
 Gifs animados e outras ilustrações são bem-vindos!
@@ -51,7 +52,7 @@ TEMPO: +/- 15min
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | -- |
 |  Douglas Farias de Castro      | | |
-|  Gustavo Duarte Moreira        | | |
+|  Gustavo Duarte Moreira        | Criação do repositório, documentação do README.md; | Regular |
 |  João Victor de Oliveira Matos | | |
 |  Kathlyn Lara Murussi          | | |
 |  Luís Guilherme Gaboardi Lins  | | |
