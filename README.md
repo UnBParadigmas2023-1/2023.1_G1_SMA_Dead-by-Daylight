@@ -80,7 +80,7 @@ TEMPO: +/- 15min
 |  João Victor de Oliveira Matos | Criação do agente Murderer, implementação da logica de fim de jogo e melhorias nos outros agentes | Excelente |
 |  Kathlyn Lara Murussi          | | |
 |  Luís Guilherme Gaboardi Lins  | | |
-|  Thiago Aparecido Lopes Santos | | |
+|  Thiago Aparecido Lopes Santos | Participação na criação do agente assassino, adaptações na lógica dos outros agentes, participação nas lógicas de encerramento da partida | Excelente |
 |  Thiago Siqueira Gomes         | | |
 |  Victor Hugo Carvalho Silva    | | |
 |  Vitor Manoel Aquino de Brito  | | |
