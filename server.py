@@ -41,11 +41,11 @@ model_params = {
         step=1,
         value=5,
     ),
-    "width": 30,
-    "height": 30,
+    "width": 15,
+    "height": 15,
 }
 
-grid = CanvasGrid(agent_portrayal, 30, 30, 500, 500)
+grid = CanvasGrid(agent_portrayal, 20, 20, 500, 500)
 server = ModularServer(GameModel, [grid], "Dead by Daylight", model_params)
 server.port = 8080
 server.launch()
