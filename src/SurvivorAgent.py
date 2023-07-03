@@ -84,7 +84,7 @@ class SurvivorAgent(Agent):
             # targets = [obj for obj in this_cell if not isinstance(obj, SurvivorAgent)]
             targets = []
             for obj in this_cell:
-                if obj is self.model.exit or obj in self.model.generators:
+                if obj is self.model.exit or (obj in self.model.generators and obj.activated == False):
                     targets.append(obj)
             return targets
         except:
