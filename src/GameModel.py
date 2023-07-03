@@ -58,7 +58,9 @@ class GameModel(Model):
 
         if len(self.survivors) == 0 or self.exit.escaped:
             self.game_over = True
-
+        if len(self.survivors) == 0 and not self.exit.escaped and not self.exit.win:
+            print("Derrota")
+        
         inactive_generators = [generator for generator in self.generators if not generator.activated]
         if len(inactive_generators) == 0 and not self.exit_agent_created:
             self.add_exit_agent()

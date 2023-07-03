@@ -22,6 +22,8 @@ def agent_portrayal(agent):
         portrayal['Shape'] = "assets/devil.png"
     elif type(agent) is ExitAgent:
         portrayal['Shape'] = "assets/door.png"
+        if agent.win and agent.end:
+            portrayal['Shape'] = "assets/win.png"
     return portrayal
 
 
@@ -47,4 +49,15 @@ model_params = {
 
 grid = CanvasGrid(agent_portrayal, 20, 20, 500, 500)
 server = ModularServer(GameModel, [grid], "Dead by Daylight", model_params)
+
+server.description = """Esta é uma simulação do jogo Dead by Daylight. 
+                        Um jogo multiplayer de terror assimétrico em que os jogadores são divididos em sobreviventes e assassino, 
+                        onde o objetivo dos sobreviventes é consertar os geradores (lâmpadas), espalhados aleatoriamente pelo mapa, 
+                        para liberar o portão e fugir do mapa enquanto fogem do assassino que os caça.
+
+                        Portanto, o objetivo do assassino é simples: matar todos os sobreviventes antes que algum deles consiga fugir do mapa. 
+                        Nessa simulação realizada utilizando a biblioteca Mesa, os elementos do jogo, como os sobreviventes, o assassino e outros agentes, 
+                        são modelados e interagem em um ambiente simulado. Isso permite explorar estratégias, analisar cenários e estudar o 
+                        impacto de diferentes decisões e eventos no desenrolar do jogo."""
+
 server.port = 8080
