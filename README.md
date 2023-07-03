@@ -53,8 +53,9 @@ pip install -r requirements.txt
 ```
 mesa runserve
 ```
-
 Certifique-se de estar no diretório correto onde o arquivo run.py   está localizado.
+
+![dbd-instalacao](https://github.com/UnBParadigmas2023-1/2023.1_G1_SMA_Dead-by-Daylight/assets/69691521/599a4480-1f48-45fb-9970-4dd316027d72)
 
 ## Uso 
 Explique como usar seu projeto.
