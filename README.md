@@ -83,7 +83,7 @@ TEMPO: +/- 15min
 |  Thiago Aparecido Lopes Santos | Participação na criação do agente assassino, adaptações na lógica dos outros agentes, participação nas lógicas de encerramento da partida | Excelente |
 |  Thiago Siqueira Gomes         | | |
 |  Victor Hugo Carvalho Silva    | | |
-|  Vitor Manoel Aquino de Brito  | | |
+|  Vitor Manoel Aquino de Brito  | Criação do Agente base junto com o Luís, servindo como referência para melhorias no projeto, inserção de sliders para dar dinamismo ao jogo permitindo que o jogador selecione o número de sobreviventes e geradores | Excelente |
 
 ## Outros 
 Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
