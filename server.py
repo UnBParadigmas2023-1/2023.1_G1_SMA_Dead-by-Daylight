@@ -22,6 +22,8 @@ def agent_portrayal(agent):
         portrayal['Shape'] = "assets/devil.png"
     elif type(agent) is ExitAgent:
         portrayal['Shape'] = "assets/door.png"
+        if agent.win and agent.escaped:
+            portrayal['Shape'] = "assets/win.png"
     return portrayal
 
 
