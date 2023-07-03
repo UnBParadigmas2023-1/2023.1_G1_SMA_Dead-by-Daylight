@@ -77,7 +77,7 @@ TEMPO: +/- 15min
 | -- | -- | -- |
 |  Douglas Farias de Castro      | | |
 |  Gustavo Duarte Moreira        | Criação do repositório, documentação do README.md; | Regular |
-|  João Victor de Oliveira Matos | | |
+|  João Victor de Oliveira Matos | Criação do agente Murderer, implementação da logica de fim de jogo e melhorias nos outros agentes | Excelente |
 |  Kathlyn Lara Murussi          | | |
 |  Luís Guilherme Gaboardi Lins  | | |
 |  Thiago Aparecido Lopes Santos | | |
