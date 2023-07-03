@@ -29,9 +29,32 @@ Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcioname
 **Linguagens**: Python<br>
 **Tecnologias**: Mesa: Agent-based modeling in Python<br>
 
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
-Gifs animados e outras ilustrações são bem-vindos!
+Siga as etapas abaixo para configurar e executar o projeto em seu ambiente local.
+
+### 1. Crie um ambiente virtual usando o comando:
+
+```
+python3 -m venv env   
+```
+
+### 2. Ative o ambiente virtual digitando o seguinte comando:
+```
+source env/bin/activate
+```
+
+### 3. Instale as dependências do projeto usando o comando:
+
+```
+pip install -r requirements.txt
+```
+
+### 4. Após a instalação bem-sucedida das dependências, execute o servidor usando o comando:
+
+```
+mesa runserve
+```
+
+Certifique-se de estar no diretório correto onde o arquivo run.py   está localizado.
 
 ## Uso 
 Explique como usar seu projeto.
