@@ -21,9 +21,6 @@ class GameModel(Model):
         self.survivors = []
         self.exit = None
         self.generators = []
-        # self.init_agent(SurvivorAgent, self.num_agents)
-        # self.init_agent(GeneratorAgent, self.num_agents)
-        # self.init_agent(MurdererAgent, 1)
         self.exit_agent_created = False
 
         self.murderer = MurdererAgent(uuid.uuid1(), self)
@@ -52,14 +49,6 @@ class GameModel(Model):
         x, y = self.select_random_edge()
         self.grid.place_agent(self.exit, (x, y))
         self.schedule.add(self.exit)
-
-    # def init_agent(self, Agent, num_agents):
-    #     for i in range(num_agents):
-    #         id = uuid.uuid1()
-    #         agent = Agent(id, self)
-    #         self.schedule.add(agent)
-    #         if self.grid.exists_empty_cells():
-    #             self.grid.place_agent(agent, self.grid.find_empty())
 
     def step(self):
         if not self.game_over:

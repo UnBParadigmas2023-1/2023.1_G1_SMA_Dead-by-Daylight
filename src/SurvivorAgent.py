@@ -11,7 +11,7 @@ class SurvivorAgent(Agent):
         self.alive = True
 
     def step(self):
-        if self.model.game_over:
+        if self.model.exit_agent_created:
             self.view_range = float('inf')  # Atribui o valor infinito ao view_range quando game_over for True
         self.die()
         if self.alive is False:
@@ -32,7 +32,6 @@ class SurvivorAgent(Agent):
         new_position = self.get_new_position(
             possible_walk_pos, self.pos)
         self.model.grid.move_agent(self, new_position)
-        # print(format(self.role), "> Andei pro gerador")
 
     def get_new_position(self, possible_walk_pos, current_pos):
         next_pos = None
