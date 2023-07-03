@@ -23,7 +23,9 @@
 A simulação do jogo "Dead by Daylight" é realizada utilizando a biblioteca Mesa. Nessa abordagem, os elementos do jogo, como os sobreviventes, o assassino e outros agentes, são modelados e interagem em um ambiente simulado. Isso permite explorar estratégias, analisar cenários e estudar o impacto de diferentes decisões e eventos no desenrolar do jogo.
 
 ## Screenshots
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+![Captura de tela de 2023-07-03 19-47-21](https://github.com/UnBParadigmas2023-1/2023.1_G1_SMA_Dead-by-Daylight/assets/54643372/d40deb17-6482-4741-92af-0108637bddb6)
+
+![image](https://github.com/UnBParadigmas2023-1/2023.1_G1_SMA_Dead-by-Daylight/assets/54643372/ff75f9c4-5aff-434f-b26a-1b972a678da8)
 
 ## Instalação 
 **Linguagens**: Python<br>
@@ -51,16 +53,29 @@ pip install -r requirements.txt
 ### 4. Após a instalação bem-sucedida das dependências, execute o servidor usando o comando:
 
 ```
-mesa runserve
+mesa runserver
 ```
 Certifique-se de estar no diretório correto onde o arquivo run.py   está localizado.
 
 ![dbd-instalacao](https://github.com/UnBParadigmas2023-1/2023.1_G1_SMA_Dead-by-Daylight/assets/69691521/599a4480-1f48-45fb-9970-4dd316027d72)
 
 ## Uso 
-Explique como usar seu projeto.
-Procure ilustrar em passos, com apoio de telas do software, seja com base na interface gráfica, seja com base no terminal.
-Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
+Executando o servidor, gerará uma página em seu navegador, onde:
+
+Antes de iniciar uma simulação é possível alterar os números de sobreviventes e geradores, além da velocidade dos passos nos sliders mostrados abaixo:
+
+![image](https://github.com/UnBParadigmas2023-1/2023.1_G1_SMA_Dead-by-Daylight/assets/54643372/b1b817d6-4b76-49c3-a813-da71f8801e03)
+
+![image](https://github.com/UnBParadigmas2023-1/2023.1_G1_SMA_Dead-by-Daylight/assets/54643372/d92bfd9c-540b-4a69-8d8b-1ab61bafb704)
+
+Para iniciar/pausar, rodar passo a passo ou resetar uma simulação aperte os seguintes botões respectivamente:
+
+![image](https://github.com/UnBParadigmas2023-1/2023.1_G1_SMA_Dead-by-Daylight/assets/54643372/29d76b06-d357-4d82-90be-8f95c92eee32)
+
+Por fim, para visualizar uma breve descrição do simulador, acesse pelo botão abaixo:
+
+![image](https://github.com/UnBParadigmas2023-1/2023.1_G1_SMA_Dead-by-Daylight/assets/54643372/5e269bb1-8866-4206-8900-f4624c39c046)
+
 
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto.
@@ -82,19 +97,21 @@ TEMPO: +/- 15min
 |  Luís Guilherme Gaboardi Lins  | | |
 |  Thiago Aparecido Lopes Santos | Participação na criação do agente assassino, adaptações na lógica dos outros agentes, participação nas lógicas de encerramento da partida | Excelente |
 |  Thiago Siqueira Gomes         | | |
-|  Victor Hugo Carvalho Silva    | | |
+|  Victor Hugo Carvalho Silva    | Criação da descrição e adição da logo de vitória dos sobreviventes | Boa |
 |  Vitor Manoel Aquino de Brito  | Criação do Agente base junto com o Luís, servindo como referência para melhorias no projeto, inserção de sliders para dar dinamismo ao jogo permitindo que o jogador selecione o número de sobreviventes e geradores | Excelente |
 
 ## Outros 
 Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
+
 (i) Lições Aprendidas;
 - Aprendizado e uso da biblioteca Mesa para simular o jogo Dead by Daylight;
+  
 (ii) Percepções;
 - A biblioteca Mesa permite a criação de modelos de simulação de forma simples e intuitiva;
 
 (iii) Contribuições e Fragilidades, e
 - O projeto apresenta algumas fragilidades que precisam ser consideradas: 
-    - 
+
 (iV) Trabalhos Futuros.
 - Incluir a expansão do modelo para acrescentar elementos adicionais do jogo como: 
     - diferentes mapas;
