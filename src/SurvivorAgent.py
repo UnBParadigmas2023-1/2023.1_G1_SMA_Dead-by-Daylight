@@ -36,9 +36,10 @@ class SurvivorAgent(Agent):
     def get_new_position(self, possible_walk_pos, current_pos):
         next_pos = None
         current_best_pos = None
-        minimum_distance = 10**6
+        minimum_distance = float('inf')
         step_x = 0
         step_y = 0
+
         # Para cada posição possível de andar, ele procura o gerador
         for walk_pos in possible_walk_pos:
             generator = self.check_pos_for_generator(walk_pos)
@@ -52,7 +53,7 @@ class SurvivorAgent(Agent):
                     minimum_distance = current_distance
                     current_best_pos = walk_pos
 
-        # Se ele encontrou um gerador
+        # Se ele encontrou gerador
         if current_best_pos != None:
             # Define o eixo (x) e direção que vai andar
             if current_pos[0] < current_best_pos[0]:
@@ -69,6 +70,7 @@ class SurvivorAgent(Agent):
             next_pos = (current_pos[0] + min(self.walk_speed, abs(current_pos[0] - current_best_pos[0])) * step_x,
                         current_pos[1] + min(self.walk_speed, abs(current_pos[1] - current_best_pos[1])) * step_y)
 
+            print(next_pos)
             return next_pos
 
         next_pos = self.model.grid.get_neighborhood(
@@ -79,8 +81,6 @@ class SurvivorAgent(Agent):
         try:
             # Retorna lista de objetos na célula diferentes de Agent
             this_cell = self.model.grid.get_cell_list_contents([pos])
-
-            # targets = [obj for obj in this_cell if not isinstance(obj, SurvivorAgent)]
             targets = []
             for obj in this_cell:
                 if obj is self.model.exit or (obj in self.model.generators and obj.activated == False):
@@ -99,5 +99,4 @@ class SurvivorAgent(Agent):
                     target.append(obj)
             return target
         except:
-            print("aqui")
             return []

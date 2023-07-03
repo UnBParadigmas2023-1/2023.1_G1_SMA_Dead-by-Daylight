@@ -2,7 +2,7 @@ from mesa import Agent
 
 
 class MurdererAgent(Agent):
-    def __init__(self, unique_id, model, view_range=10,walk_speed=2, moore=False):
+    def __init__(self, unique_id, model, view_range=10,walk_speed=1, moore=True):
         super().__init__(unique_id, model)
         self.view_range = view_range  # Alcance da visão do personagem
         self.walk_speed = walk_speed  # Quadrados andados por passo('velocidade')
@@ -25,7 +25,7 @@ class MurdererAgent(Agent):
     def get_new_position(self, possible_walk_pos, current_pos):
         next_pos = None
         current_best_pos = None
-        minimum_distance = 10**6
+        minimum_distance = float('inf')
         step_x = 0
         step_y = 0
         # Para cada posição possível de andar, ele procura um sobrevivente
@@ -70,11 +70,9 @@ class MurdererAgent(Agent):
             # Retorna lista de objetos na célula diferentes de Agent
             this_cell = self.model.grid.get_cell_list_contents([pos])
             target = []
-            # print("AQUI POSIÇAO ATUAL ", this_cell)
             for obj in this_cell:
                 if obj in self.model.survivors:
                     target.append(obj)
-                # print("TESTE POSICAO: ", target)
             return target
         except:
             # Retorna nada
