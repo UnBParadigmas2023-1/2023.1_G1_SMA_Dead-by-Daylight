@@ -90,7 +90,7 @@ TEMPO: +/- 15min
 ## Participações
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | -- |
-|  Douglas Farias de Castro      | | |
+|  Douglas Farias de Castro      | Inclusão de boas práticas recomendadas pelo framework Mesa e documentação da Instação e execução do projeto. | Regular |
 |  Gustavo Duarte Moreira        | Criação do repositório, documentação do README.md; | Regular |
 |  João Victor de Oliveira Matos | Criação do agente Murderer, implementação da logica de fim de jogo e melhorias nos outros agentes | Excelente |
 |  Kathlyn Lara Murussi          | | |
@@ -101,7 +101,6 @@ TEMPO: +/- 15min
 |  Vitor Manoel Aquino de Brito  | Criação do Agente base junto com o Luís, servindo como referência para melhorias no projeto, inserção de sliders para dar dinamismo ao jogo permitindo que o jogador selecione o número de sobreviventes e geradores | Excelente |
 
 ## Outros 
-Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
 
 (i) Lições Aprendidas;
 - Aprendizado e uso da biblioteca Mesa para simular o jogo Dead by Daylight;
@@ -122,9 +121,7 @@ Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não es
 - Explorar diferentes estratégias de sobrevivência e de caça;
 - Explorar diferentes cenários e eventos;
 
-
 ## Fontes
 - Behaviour Interactive. (2021). Dead by Daylight [Video game]. Disponível em: https://deadbydaylight.com/;
 - Mesa, Documentação oficial: Mesa. (s.d.). Documentação oficial do Mesa. Disponível em: https://mesa.readthedocs.io/. Accessado em 02 de julho de 2023.
 - Mesa, Repositório no Github: https://github.com/projectmesa/mesa.  Accessado em 02 de julho de 2023.
-
