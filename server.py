@@ -1,8 +1,9 @@
 from mesa.visualization.modules import CanvasGrid
 from mesa.visualization.ModularVisualization import ModularServer
 from src.GeneratorAgent import GeneratorAgent
-from src.CharacterAgent import CharacterAgent
-from src.CharacterModel import CharacterModel
+from src.MurdererAgent import MurdererAgent
+from src.SurvivorAgent import SurvivorAgent
+from src.GameModel import GameModel
 from src.ExitAgent import ExitAgent
 
 
@@ -11,15 +12,17 @@ def agent_portrayal(agent):
     if type(agent) is GeneratorAgent:
         if not agent.activated:
             portrayal['Shape'] = "assets/light_off.png"
-    elif type(agent) is CharacterAgent:
+    elif type(agent) is SurvivorAgent:
         portrayal['Shape'] = "assets/blob.png"
+    elif type(agent) is MurdererAgent:
+        portrayal['Shape'] = "assets/jason_mask.png"
     elif type(agent) is ExitAgent:
         portrayal['Shape'] = "assets/door.png"
     return portrayal
 
 
 grid = CanvasGrid(agent_portrayal, 30, 30, 500, 500)
-server = ModularServer(CharacterModel, [grid], "Dead by Daylight", {
+server = ModularServer(GameModel, [grid], "Dead by Daylight", {
                        "N": 4, "width": 25, "height": 15})
 server.port = 8080
 server.launch()
