@@ -96,7 +96,7 @@ TEMPO: +/- 15min
 |  Kathlyn Lara Murussi          | | |
 |  Luís Guilherme Gaboardi Lins  | | |
 |  Thiago Aparecido Lopes Santos | Participação na criação do agente assassino, adaptações na lógica dos outros agentes, participação nas lógicas de encerramento da partida | Excelente |
-|  Thiago Siqueira Gomes         | | |
+|  Thiago Siqueira Gomes         | Criação do agente Assassino e implementação de lógica de finalização de partidas junto com outros integrantes, criação de lógica para acender luzes dos geradores | Excelente |
 |  Victor Hugo Carvalho Silva    | Criação da descrição e adição da logo de vitória dos sobreviventes | Boa |
 |  Vitor Manoel Aquino de Brito  | Criação do Agente base junto com o Luís, servindo como referência para melhorias no projeto, inserção de sliders para dar dinamismo ao jogo permitindo que o jogador selecione o número de sobreviventes e geradores | Excelente |
 
