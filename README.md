@@ -94,7 +94,7 @@ TEMPO: +/- 15min
 |  Gustavo Duarte Moreira        | Criação do repositório, documentação do README.md; | Regular |
 |  João Victor de Oliveira Matos | Criação do agente Murderer, implementação da logica de fim de jogo e melhorias nos outros agentes | Excelente |
 |  Kathlyn Lara Murussi          | | |
-|  Luís Guilherme Gaboardi Lins  | | |
+|  Luís Guilherme Gaboardi Lins  | Defininção do escopo do projeto, desenvolvimento da primeira versão dos agentes Survivor e Gerador, do server e do GameModel, melhorias no fluxo do jogo. | Excelente |
 |  Thiago Aparecido Lopes Santos | Participação na criação do agente assassino, adaptações na lógica dos outros agentes, participação nas lógicas de encerramento da partida | Excelente |
 |  Thiago Siqueira Gomes         | Criação do agente Assassino e implementação de lógica de finalização de partidas junto com outros integrantes, criação de lógica para acender luzes dos geradores | Excelente |
 |  Victor Hugo Carvalho Silva    | Criação da descrição e adição da logo de vitória dos sobreviventes | Boa |
